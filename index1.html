@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="h-f-framework">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    
+    <script type='text/javascript' src='static/js/framework.js'></script>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        html,body{
+            width:100%;
+            height:100%;
+            /*overflow:hidden;*/
+        }
+
+        html, body, #application {
+            height: 100%;
+            width: 100%;
+            /*overflow:hidden;*/
+        }
+
+        .c-loading-page {
+            font-size: 1rem; /* =14px */
+            color: #666;
+            font-family: "Microsoft YaHei";
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 10000;
+            text-align: center;
+            overflow:hidden;
+        }
+
+        .c-loading-page:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle
+        }
+
+        .c-loading-page > * {
+            display: inline-block;
+            font-size: 1rem;
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        .c-loading {
+            margin: 20px 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .c-loading > div {
+            width: 14px;
+            height: 14px;
+            background-color: #67CF22;
+            border-radius: 100%;
+            display: inline-block;
+            -webkit-animation: circledelay 1.4s infinite ease-in-out;
+            animation: circledelay 1.4s infinite ease-in-out;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            margin: 0 5px;
+        }
+
+        .c-loading .c-circle1 {
+            -webkit-animation-delay: -0.32s;
+            animation-delay: -0.32s;
+            background-color: #82cf00;
+        }
+
+        .c-loading .c-circle2 {
+            -webkit-animation-delay: -0.16s;
+            animation-delay: -0.16s;
+            background-color: #75caf2;
+
+        }
+
+        .c-loading .c-circle3 {
+            background-color: #fda93f;
+
+        }
+
+        @-webkit-keyframes circledelay {
+            0%, 80%, 100% {
+                -webkit-transform: scale(0.0)
+            }
+            40% {
+                -webkit-transform: scale(1.0)
+            }
+        }
+
+        @keyframes circledelay {
+            0%, 80%, 100% {
+                transform: scale(0.0);
+                -webkit-transform: scale(0.0);
+            }
+            40% {
+                transform: scale(1.0);
+                -webkit-transform: scale(1.0);
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="application"></div>
+<div id="__loading_page__" class="c-loading-page">
+    <div>
+        <div class="c-loading">
+            <div class="c-circle1"></div>
+            <div class="c-circle2"></div>
+            <div class="c-circle3"></div>
+        </div>
+        <p>正在加载资源，请稍候...</p>
+    </div>
+</div>
+<!-- 正在加载的遮罩层（全屏显示） -->
+<div id="__loading_mask__" class="hm-mask">
+    <div id="loadingTip" class="hm-loading hm-loading-xl">
+        <div class="hm-loading-image">
+            <div class="hm-loading-container hm-loading-container1">
+                <div class="hm-loading-circle1"></div>
+                <div class="hm-loading-circle2"></div>
+                <div class="hm-loading-circle3"></div>
+                <div class="hm-loading-circle4"></div>
+            </div>
+            <div class="hm-loading-container hm-loading-container2">
+                <div class="hm-loading-circle1"></div>
+                <div class="hm-loading-circle2"></div>
+                <div class="hm-loading-circle3"></div>
+                <div class="hm-loading-circle4"></div>
+            </div>
+            <div class="hm-loading-container hm-loading-container3">
+                <div class="hm-loading-circle1"></div>
+                <div class="hm-loading-circle2"></div>
+                <div class="hm-loading-circle3"></div>
+                <div class="hm-loading-circle4"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
